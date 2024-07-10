@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 35px;
+    background-color: #f0f0f0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 5px 0;
+    box-shadow: 0 3px 4px  rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2px 0; 
+    z-index: 1000; 
+  }
+header h1 {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    font-size: 35px;
+    color: #001f3f;
+}
+header nav {
+    display: inline-block;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 16px; 
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.content {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.content h2 {
+    color: #333;
+}
+.h1{
+    font-size: 55px;
+    margin-top: 150px;
+    color: black;
+    font-family:"Quicksand", "Odoo Unicode Support Noto";
+}
+.p{
+    font-size: 28px;
+    color: #001f3f;
+    font-weight: bold;
+}
+input[type="file"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #FFB012;
+    padding: 12px 16px;
+    border: 1px solid #FFB012;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input[type="file"]::file-selector-button {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.submit-button {
+    background-color: #FFB012;
+    color: #fff;
+    padding: 18px 20px;
+    border: none; 
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.submit-button:hover {
+    background-color: #ffcc00;
+}
+input[type="file"] {
+    display: none;
+  }
+  
+  .custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #FFB012;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #ffcc00;
+  }
+  .custom-file-upload i {
+    margin-right: 5px;
+  }
+  
+  #file-name {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .content {
+    padding: 10px;
+  }
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .logo{
+    color: #001f3f;
+  }
+  footer {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+    .footer-section {
+        padding: 10px;
+        flex: 1;
+    }
+    
+    .footer-section h3 {
+        color: #f0f0f0;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section p {
+        font-size: 14px;
+        color: #ccc;
+    }
+    
+    .footer-section ul {
+        list-style-type: none;
+        line-height: 2;
+    }
+    
+    .footer-section ul li a {
+        color: #ccc;
+        text-decoration: none;
+    }
+    
+    .footer-section ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    .contact-form .text-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .contact-form textarea {
+        height: 100px;
+    }
+    
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 10px;
+        color: #ccc;
+    }
+    

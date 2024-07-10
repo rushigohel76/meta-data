@@ -1,0 +1,71 @@
+
+----------------work----------------
+
+
+
+----------------------------FRONTEND----------------------
+frontend - not done yet 
+mobile friendly
+
+PAGES - Sign Up not done 
+	Log in 
+	Home not done 
+	About Not done
+	Contact not done
+	
+---------------------Database ----------------------------
+
+Database Schema Design
+Tables:
+Users: Stores user details.
+
+user_id (Primary Key)
+username
+password_hash
+email
+created_at
+updated_at
+
+Images: Stores metadata for each image.
+
+image_id (Primary Key)
+user_id (Foreign Key to Users)
+file_path (or blob if storing directly in the database)
+filename
+upload_date
+size
+format (e.g., JPEG, PNG)
+width
+height
+color_palette (JSON or text)
+
+Image_Metadata: Stores additional attributes of images.
+
+metadata_id (Primary Key)
+image_id (Foreign Key to Images)
+attribute_name
+attribute_value
+
+HTML_CSS_Templates: Stores templates and components.
+
+template_id (Primary Key)
+template_name
+html_content (TEXT)
+css_content (TEXT)
+
+Image_Processing_Logs: Tracks actions performed on images.
+
+log_id (Primary Key)
+image_id (Foreign Key to Images)
+user_id (Foreign Key to Users)
+action (e.g., "resized", "filtered")
+timestamp
+Relationships:
+Users to Images: One-to-Many (a user can upload multiple images).
+Images to Image_Metadata: One-to-Many (an image can have multiple attributes).
+Images to Image_Processing_Logs: One-to-Many (multiple actions can be performed on a single image).
+
+----------------------------BACKEND-----------------------
+
+image insert - done
+image meta data extract - not done

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Imagika</title>
+    <link rel="stylesheet" href="../frontend/css/style.css"/>
+    <!-- <script src="../frontend/index.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Imagika</h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="home.html" class="hover-underline-animation">Home</a></li>
+            <li><a href="about.html" class="hover-underline-animation">About</a></li>
+            <li><a href="contact.html" class="hover-underline-animation">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div>
+        <div class="content">
+          <h1 class="h1">
+            Image Proccessing <br/><br/>
+            System
+          </h1>
+          <br />
+          <p class="p">Upload Your Image Here</p>
+          <br/>
+          <form action="upload" method="post" enctype="multipart/form-data">
+            <label for="upload" class="custom-file-upload">
+              <i class="fa fa-cloud-upload"></i> Choose File
+            </label>
+            <input
+              type="file"
+              id="upload"
+              name="file"
+              accept=".jpg, .jpeg, .png" required
+            /><button type="Submit" class="submit-button" value="upload">
+              Submit
+            </button>
+            <p id="file-name"></p>
+            <span id="error-message" class="error-message"></span>
+          </form>
+        </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+          <div class="footer-section about">
+              <h3>About Us</h3>
+              <p>Our Website Generate the Html and Css code.</p>
+          </div>
+          <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-section contact-form">
+              <h3>Contact Us</h3>
+              <form action="user_respons  e" method="post"  id="myForm">
+                  <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..." id="email">
+                  <textarea name="message" class="text-input contact-input" placeholder="Your message..." id ="response"></textarea>
+                  <button type="submit" class="btn btn-primary" id="submit-btn">Send</button>
+              </form>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          &copy; 2024 YourWebsite.com | Designed by You
+      </div>
+  </footer>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('myForm');
+      const fileInput = document.getElementById('upload');
+      const submitButton = document.getElementById('submit-btn');
+      const errorMessage = document.getElementById('error-message');
+      
+      form.addEventListener('submit', function(event) {
+        if (fileInput.files.length === 0) {
+          event.preventDefault();
+          
+          errorMessage.textContent = alert("Please Select the field");
+          errorMessage.style.display = 'block';
+        } else {
+          errorMessage.textContent = '';
+          errorMessage.style.display = 'none';
+        }
+      });
+      fileInput.addEventListener('change', function() {
+        const fileName = fileInput.files[0].name;
+        document.getElementById('file-name').textContent = `Selected File: ${fileName}`;
+      });
+    });
+    
+  </script>
+</html>

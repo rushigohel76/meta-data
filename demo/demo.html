@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellow File Upload Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>/* styles.css */
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f9fa;
+        margin: 0;
+    }
+    
+    .file-upload-container {
+        position: relative;
+        display: inline-block;
+    }
+    
+    input[type="file"] {
+        display: none;
+    }
+    
+    .custom-file-upload {
+        display: inline-block;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #ffd700; /* Yellow background */
+        color: #fff; /* White text */
+        border: 2px solid #ffc107; /* Slightly darker yellow border */
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    
+    .custom-file-upload:hover {
+        background-color: #ffeb3b; /* Lighter yellow on hover */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+    
+    .custom-file-upload:active {
+        background-color: #ffc107; /* Slightly darker yellow on click */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Increase shadow depth */
+    }
+    </style>
+<body>
+    <div class="file-upload-container">
+        <label for="file-upload" class="custom-file-upload">
+            Choose File
+        </label>
+        <input id="file-upload" type="file"/>
+    </div>
+</body>
+</html>
