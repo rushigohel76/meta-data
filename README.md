@@ -1,4 +1,4 @@
-# 🖼️ Imagika — Image Processing & Object Detection System
+# 🖼️ IMAGIKA — Image Processing & Object Detection System
 
 Imagika is a web-based image processing and object detection application developed using Python, OpenCV, YOLOv3, MySQL, and web technologies.
 
